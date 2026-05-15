@@ -1,0 +1,13 @@
+sys.reset();
+
+Z => Z not := fn(Z p) -> if(p, 0, 1);
+
+Z => Z => Z and := fn(Z p) -> fn(Z q) -> if(p, if(q, 1, 0), 0);
+
+Z => Z => Z or := fn(Z p) -> fn(Z q) -> if(p, 1, if(q, 1, 0));
+
+Z => Z => Z de_morgan1 := fn(Z p) -> fn(Z q) -> not(and(p)(q));
+
+Z => Z => Z de_morgan2 := fn(Z p) -> fn(Z q) -> not(or(p)(q));
+
+Z => Z succ := fn(Z z) -> sub(-1)(z);
