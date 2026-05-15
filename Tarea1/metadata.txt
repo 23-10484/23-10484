@@ -1,0 +1,4 @@
+Modelo usado: ChatGPT (OpenAI GPT-5.5)
+Se utilizó IA para apoyar la resolución de ejercicios de Zilly y C++.
+Prompt principal:
+"Ayúdame a resolver la tarea respetando exactamente las firmas y sintaxis pedidas."
