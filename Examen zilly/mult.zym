@@ -1,0 +1,16 @@
+::zilly+
+sys.reset();
+
+Z => Z absoluto := fn(Z v) -> if(v < 0, 0 - v, v);
+
+Z => Z => Z suma_rec := fn(Z c) -> fn(Z k) -> if(c = 0, 0, k + suma_rec(c - 1)(k));
+
+Z => Z => Z mult := fn(Z n) -> fn(Z m) -> if(absoluto(n) > absoluto(m), if(m < 0, suma_rec(0 - m)(0 - n), suma_rec(m)(n)), if(n < 0, suma_rec(0 - n)(0 - m), suma_rec(n)(m)));
+
+mult(5)(3)
+mult(-5)(3)
+mult(3)(-5)
+mult(-3)(-5)
+mult(1000)(2)
+mult(2)(1000)
+mult(0)(5)
